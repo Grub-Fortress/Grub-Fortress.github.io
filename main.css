@@ -7,15 +7,14 @@ body {
 }
 
 #mainContainer {
-	background-image:url(https://www.teamfortress.com/pyro/images/main_bg.jpg);
 	background-repeat:repeat-x;
-	background-color:#bbaca5;
+	background-color:#2D2825;
 	padding:0;
 	margin:0;
 }
 
 #pageContainer {
-	width:820px;
+	width:1200px;
 	text-align:left;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
@@ -26,15 +25,35 @@ body {
 	position:relative;
 }
 
-	a
-	{
-    color: #00aaff; /* Bright blue */
-	}
+#logoLink {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:5;
+	cursor:pointer;
+	display:block;
+}
 
-	a:hover 
-	{
-	color: #33ccff; /* Even brighter blue on hover */
-	}
+#logoImg {
+	display:block;
+	width: 616px;
+	height: 201px;
+}
+
+#navButtons {
+	position:absolute;
+	top:15px;
+	right:15px;
+	display:flex;
+	gap:6px;
+	z-index:10;
+}
+
+.navButton {
+	border:none;
+	cursor:pointer;
+	transition:none;
+}
 
 #Map_btn {
 	position:absolute;
@@ -43,82 +62,75 @@ body {
 }
 
 
-#Maps {
+#MainHeader {
 	background-image:url(images/header_TFGrub.jpg);
 	background-repeat:no-repeat;
-	width:820px;
+	background-color:#D9D9D9;
+	width:1200px;
+/*	height:1200px; */
 	margin:0;
 	padding:0;
 }
 
-#MapsHead {
-	background-image:url(https://www.teamfortress.com/pyro/images/divide.jpg);
-	background-repeat:no-repeat;
-	padding:0;
-	margin:0;
+#MainText {
+	width:1100px;
+	padding-left:12px;
+	font-size:24px;
+	line-height:30px;
 }
 
-#Maps_collapse {
-	background-image:url(https://www.teamfortress.com/pyro/images/default_bg.jpg);
-	background-repeat:repeat-y;
+#MainTextStandalone {
+	padding-top:590px;
+	width:1100px;
+	padding-left:12px;
+	font-size:24px;
+	line-height:30px;
 }
 
-#MapsBody {
-	padding-top:470px;
-	width:532px;
-	padding-left:26px;
-}
-
-#MapsBG {
-	background-image:url(https://www.teamfortress.com/pyro/images/maps_bg.jpg);
-	background-repeat:repeat-y;
-
-}
-
-.Map_block_1 {
-	padding-top:22px;
+#MainText_Title {
+	padding-top:550px;
 	padding-bottom:12px;
-	padding-left:26px;
+	width:1100px;
+	font-size:48px;
+	line-height:30px;
 }
 
-.Map_block {
-	padding-top:4px;
+#MainText_TitleStandalone {
+	padding-top:24px;
 	padding-bottom:12px;
-	padding-left:26px;
+	width:1100px;
+	font-size:48px;
+	line-height:30px;
 }
 
-.Map_block_2 {
-	padding-top:4px;
-	padding-bottom:12px;
-	padding-left:26px;
+#screenshotsCarousel {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:20px;
+	padding:20px 0;
+	width:1100px;
 }
 
-.Map_block_right {
-	float:left;
-	padding-right:14px;
-	padding-bottom:4px
+.screenshotImage {
+	max-width:700px;
+	max-height:500px;
+	border:3px solid #333;
 }
 
-.Map_desc {
-	float:left;
-	color:#e4e4e4;
-	width:514px;
-	padding-top:2px;
-	margin:0;
-	padding:0;
+.carouselArrow {
+	background-color:#444444;
+	color:#ffffff;
+	border:none;
+	padding:15px 20px;
+	font-size:32px;
+	cursor:pointer;
+	border-radius:5px;
+	transition:background-color 0.3s ease;
 }
 
-#Map_making {
-	background-image:url(https://www.teamfortress.com/pyro/images/make_bg.jpg);
-	background-repeat:repeat-y;
-	height:88px;
-	padding-left:26px;
-	padding-top:18px;
-}
-
-#Map_making_desc {
-	padding-top:8px;
-	width:770px;
+.carouselArrow:hover {
+	background-color:#666666;
 }
 
 a.textLink {
@@ -127,72 +139,31 @@ a.textLink {
 	font-weight:bold;
 }
 
+/* Simple posts (thumbnail + 2 lines) */
+#postsSimple {
+	width:1100px;
+	padding:8px 0 16px 0;
+}
+.postSimple {
+	display:flex;
+	align-items:center;
+	gap:14px;
+	margin-bottom:12px;
+	text-decoration:none;
+	color:inherit;
+}
+.postSimple img {
+	width:220px;
+	height:120px;
+	object-fit:cover;
+	border-radius:6px;
+	border:2px solid #c9b99a;
+}
+.postSimpleText .pstTitle { font-weight:bold; color:#f0e6d6; font-size:20px; }
+.postSimpleText .pstSubtitle { color:#c7c7c7; font-size:14px; }
+
 a.textLink:hover {
 	color:#993333;
-}
-
-#weapons_header {
-	background-image:url(images/weapons_header.jpg);
-	background-repeat:no-repeat;
-}
-
-#weapons_intro {
-	padding-left:282px;
-	padding-top:120px;
-	color:#ebebeb;
-	width:512px;
-}
-
-#weapon_collapse {
-	background-image:url(https://www.teamfortress.com/pyro/images/weapon_collapse.jpg);
-	background-repeat:repeat-y;
-	width:820px;
-}
-
-#weapon_header_collapse {
-	background-image:url(https://www.teamfortress.com/pyro/images/weapon_header_collapse.jpg);
-	background-repeat:repeat-y;
-	width:820px;
-}
-
-#weapons_bg {
-	background-image:url(https://www.teamfortress.com/pyro/images/weapons_bg.jpg);
-	background-repeat:no-repeat;
-	text-align:center;
-	padding-top:10px;
-}	
-
-.weapon_desc {
-	padding-top:20px;
-	font-size:11px;
-	width:520px;
-	text-align:center;
-}
-
-#achievement_header {
-	margin:0px;
-	padding:0px;
-}
-
-#achievements {
-	background-image:url(https://www.teamfortress.com/pyro/images/achievement_bg.jpg);
-	background-repeat:repeat-y;
-}
-
-#achievementsLeft {
-	padding-left:26px;
-	width:386px;
-}
-
-#achievementsRight {
-	float:right;
-	width:400px;
-}
-
-.achievementBlock {
-	height:64px;
-	width:370px;
-	padding-bottom:10px;
 }
 
 .desc {
@@ -247,7 +218,7 @@ a.textLink:hover {
 }
 
 #footer {
-	background-image:url(https://www.teamfortress.com/pyro/images/footerBG.jpg);
+	background-image:url(images/footerBG.jpg);
 	height:60px;
 }
 
@@ -271,64 +242,7 @@ a.textLink:hover {
 	padding:0;
 }
 
-#sniper {
-	margin:0;
-	padding:0;
-}
-
-#weekend {
-	width:820px;
-	height:172px;
-	background-image:url(https://www.teamfortress.com/pyro/images/weekend/weekend_bg.jpg);
-	background-repeat:no-repeat;
-	margin:0;
-	padding:0;
-}
-
 #button {
 	padding-top:96px;
 	padding-left:16px;
-}
-
-#weekendInfo {
-	float:right;
-	width:514px;
-	text-align:left;
-	padding-right:12px;
-	padding-top:100px;
-	color:#fff5c7;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:18px;
-}
-
-#weekendInfo_small {
-	float:right;
-	width:514px;
-	text-align:left;
-	padding-right:12px;
-	padding-top:100px;
-	color:#fff5c7;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:16px;
-	font-weight:bold;
-}
-
-.weekendInfoBold {
-	font-weight:bold;
-}
-
-#weekendInfo a {
-	color:#ffe566;
-}
-
-#weekendInfo a:hover {
-	color:#FFFFFF;
-}
-
-#weekendInfo_small a {
-	color:#ffe566;
-}
-
-#weekendInfo_small a:hover {
-	color:#FFFFFF;
 }
