@@ -67,7 +67,13 @@ body {
 	background-repeat:no-repeat;
 	background-color:#D9D9D9;
 	width:1200px;
-/*	height:1200px; */
+	margin:0;
+	padding:0;
+}
+
+#ImportantNotice {
+	background-color:#EBA370;
+	width:1180px;
 	margin:0;
 	padding:0;
 }
@@ -222,4 +228,10 @@ a.textLink:hover {
 #button {
 	padding-top:96px;
 	padding-left:16px;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  background-color: #BF9070;
+  color: #000000;
 }
